@@ -32,6 +32,9 @@
 </head>
 <body id="body">
     <div class="dashboard">
+        <div class="notification">Referral Code Copied
+            <span class="cancel">X</span>
+        </div>
         <div class="header">
             <div class="picon">
                 <img src="assets/img/images/profile.png" alt="profile">
@@ -178,13 +181,13 @@
         </div>
 
         <div class="baldiv">
-            <p class="text-white">Refer Friends</p>
+            <p>Refer Friends</p>
             <p>
                 <span class="balance"> 
                     Team: 0
                 </span>
             </p>
-            <a href="history.html">
+            <a href="#" onclick="document.querySelector('.notification').style.display = 'block'">
                 <div class="fund_wallet">Copy Link  &nbsp;&nbsp; <i class="fa fa-copy"></i></div>
             </a>
         </div>

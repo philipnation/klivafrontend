@@ -83,6 +83,26 @@ a{
     animation: 0.5s shake linear;
     font-family: 'Montserrat',serif;
 }
+.notification{
+    display: none;
+    position: fixed;
+    background-color: var(--color);
+    color: white;
+    width: 100%;
+    font-size: 9pt;
+    padding: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    animation: 0.5s shake linear;
+    font-family: 'Montserrat',serif;
+    z-index: 1;
+}
+.notification .cancel{
+    position: absolute;
+    right: 5%;
+    font-size: 14px;
+}
 .preloader{
     position: fixed;
     top: 40%;
