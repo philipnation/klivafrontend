@@ -336,6 +336,17 @@ a{
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.dashboard .div-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard .div-flex .sub-flex{
+    width: 49%;
+}
+.sub-flex .fund_wallet{
+    font-size: 12px;
+}
 .dashboard .baldiv p{
     text-align: center;
     color: var(--secondary-color);
