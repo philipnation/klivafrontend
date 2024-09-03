@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/scriptinv.js" defer></script>
+    <script src="assets/js/timerinv.js" defer></script>
+</head>
+<body id="body">
+    <div class="dashboard">
+        <div class="header">
+            <div class="picon">
+                <img src="assets/img/images/profile.png" alt="profile">
+                <!--<i class="fa fa-user"></i>-->
+            </div>
+            <div class="head-icons">
+                <a href="./"><i class="fa fa-home"></i></a>
+                <a href="#"><i class="fa fa-bell"></i></a>
+            </div>
+        </div>
+        <p class="error"></p>
+
+
+        <div id="inv">
+        <div class="buy" id="buy">
+            <div class="updiv" style="width: auto;">FARM OWNERSHIP</div><br>
+            <div>
+                <label for="">Interest Rate: 10%</label>
+                <label for="">Interest Period: Weekly</label>
+                <label for="">Maturity After: 30 Weeks</label><br>
+                <label for="">(&#8358;1,255,000 - &#8358;50,000,000)</label>
+
+                <label for="">Amount</label>
+                <input type="number" id="usdtamount" class="usdtamount" onkeyup="changenaira(this)" placeholder="0" min="0">
+                <span for="" class="side-span">&#8358;</span>
+
+            </div>
+
+            <div>
+                <button id="btn_pay" class="text-white">PAY &#8358; <span id="nairaamount2" class="nairaamount2">0</span></button>
+            </div>
+        </div>
+
+        <div class="buy" id="buy">
+            <div class="updiv" style="width: auto;">ANIMAL/POULTY FARMING</div><br>
+            <div>
+                <label for="">Interest Rate: 10%</label>
+                <label for="">Interest Period: Weekly</label>
+                <label for="">Maturity After: 30 Weeks</label><br>
+                <label for="">(&#8358;255,000 - &#8358;1,250,000)</label>
+
+                <label for="">Amount</label>
+                <input type="number" id="usdtamount" class="usdtamount" onkeyup="changenaira(this)" placeholder="0" min="0">
+                <span for="" class="side-span">&#8358;</span>
+
+            </div>
+
+            <div>
+                <button id="btn_pay" class="text-white">PAY &#8358; <span id="nairaamount2" class="nairaamount2">0</span></button>
+            </div>
+        </div>
+
+        <div class="buy" id="buy">
+            <div class="updiv" style="width: auto;">CROPS FARMING</div><br>
+            <div>
+                <label for="">Interest Rate: 10%</label>
+                <label for="">Interest Period: Weekly</label>
+                <label for="">Maturity After: 30 Weeks</label><br>
+                <label for="">(&#8358;50,000 - &#8358;250,000)</label>
+
+                <label for="">Amount</label>
+                <input type="number" id="usdtamount" class="usdtamount" onkeyup="changenaira(this)" placeholder="0" min="0">
+                <span for="" class="side-span">&#8358;</span>
+
+            </div>
+
+            <div>
+                <button id="btn_pay" class="text-white">PAY &#8358; <span id="nairaamount2" class="nairaamount2">0</span></button>
+            </div>
+        </div>
+
+        <div class="buy" id="buy">
+            <div class="updiv" style="width: auto;">FRUITS FARMING</div><br>
+            <div>
+                <label for="">Interest Rate: 10%</label>
+                <label for="">Interest Period: Weekly</label>
+                <label for="">Maturity After: 30 Weeks</label><br>
+                <label for="">(&#8358;10,000 - &#8358;49,000)</label>
+
+                <label for="">Amount</label>
+                <input type="number" id="usdtamount" class="usdtamount" onkeyup="changenaira(this)" placeholder="0" min="0">
+                <span for="" class="side-span">&#8358;</span>
+
+            </div>
+
+            <div>
+                <button id="proceed" class="text-white">PAY &#8358; <span id="nairaamount2" class="nairaamount2">0</span></button>
+            </div>
+        </div>
+        </div>
+        
+
+        <div class="buy" id="time_div">
+            <div>
+                <label for="">Timer to Account details closure</label>
+                <nav>
+                    <div>
+                        Account Number:
+                    </div>
+                    <div>
+                        2223947322
+                        <span><i class="fa fa-copy"></i></span>
+                    </div>
+                </nav>
+                <nav>
+                    <div>
+                        Bank:
+                    </div>
+                    <div>
+                        Indigo Bank
+                        <span><i class="fa fa-copy"></i></span>
+                    </div>
+                </nav>
+                <nav>
+                    <div>
+                        Name:
+                    </div>
+                    <div>
+                        Johs Iscoio
+                        <span><i class="fa fa-copy"></i></span>
+                    </div>
+                </nav>
+                <p id="timer"></p>
+            </div>
+            <div>
+                <a href="#"><button class="text-white">Cancel Anyways</button></a>
+                <a href="./"><button class="text-white">Payment Done</button></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+      $('#proceed').click(function() {
+          var usdtamount = $("#usdtamount").val();
+          var nairaamount = $("#nairaamount").val();
+          var email = $("#email").val();
+          var userid = $("#userid").val();
+          var wallet_address = $("#wallet_address").val();
+          $.post("include/addbuy.php", {
+              //The building_unique_id is the post array and then the second onces are the variables
+              email: email,
+              nairaamount : nairaamount ,
+              usdtamount: usdtamount,
+              wallet_address: wallet_address,
+          }, function(data, status){
+              $("#notification").html(data);
+              alert(data);
+          });
+      });
+    });
+</script>
+</html>

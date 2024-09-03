@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/timer.js" defer></script>
+</head>
+<body id="body">
+    <div class="dashboard">
+        <div class="header">
+            <div class="picon">
+                <img src="assets/img/images/profile.png" alt="profile">
+                <!--<i class="fa fa-user"></i>-->
+            </div>
+            <div class="head-icons">
+                <a href="./"><i class="fa fa-home"></i></a>
+                <!--<i class="fa fa-bell"></i>-->
+            </div>
+        </div>
+        
+        <p class="error"></p>
+
+        <div class="buy" id="buy">
+            <div class="updiv" style="width: auto;">WITHDRAWAL</div>
+            <div>
+                <label for="">Amount</label>
+                <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
+                <span for="" class="side-span">&#8358;</span>
+
+            </div>
+            <!--<div>
+                <label for="">you pay</label>
+                <input type="number" id="nairaamount" onkeyup="changeusdt()" placeholder="0">
+                <span for="" class="side-span">&#8358;</span>
+            </div>-->
+            <div>
+                <button id="btn_pay" style="color: white;">WITHDRAW &#8358; <span id="nairaamount2">0</span></button>
+            </div>
+        </div>
+
+        <div class="buy" id="wallet_div">
+            <div>
+                <label for="" style="text-align: center;">Receiving Bank</label>
+                <nav>
+                    <div>
+                        Account Number:
+                    </div>
+                    <div>
+                        2223947322
+                    </div>
+                </nav>
+                <nav>
+                    <div>
+                        Bank:
+                    </div>
+                    <div>
+                        Indigo Bank
+                    </div>
+                </nav>
+                <nav>
+                    <div>
+                        Name:
+                    </div>
+                    <div>
+                        Johs Iscoio
+                    </div>
+                </nav>
+                <p id="timer"></p>
+            </div>
+            <div>
+                <button><a href="#" style="color: white;">Cancel</a></button>
+                <a href="./"><button style="color: white;">Proceed</button></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+      $('#proceed').click(function() {
+          var usdtamount = $("#usdtamount").val();
+          var nairaamount = $("#nairaamount").val();
+          var email = $("#email").val();
+          var userid = $("#userid").val();
+          var wallet_address = $("#wallet_address").val();
+          $.post("include/addbuy.php", {
+              //The building_unique_id is the post array and then the second onces are the variables
+              email: email,
+              nairaamount : nairaamount ,
+              usdtamount: usdtamount,
+              wallet_address: wallet_address,
+          }, function(data, status){
+              $("#notification").html(data);
+              alert(data);
+          });
+      });
+    });
+</script>
+</html>

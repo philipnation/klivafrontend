@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicker</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/ajaxfunction.js"></script>
+</head>
+<body id="body" onload="setTimeout(preloader, 2000)">
+    <div class="svg">
+        <img src="assets/img/images/svg.svg" alt="">
+    </div>
+    <div class="main-login">
+        <div class="header">
+            <!--<div class="login-back"><a href="index.html"><i class="fa fa-arrow-left"></i></a></div>-->
+            <div>login</div>
+        </div>
+        <div class="next-div">
+            <p>Sign in</p>
+            <p>Login to your account</p>
+        </div>
+        <p class="error"></p>
+        <!--<div class="svg_float">
+            <img src="assets/img/images/svg_float.svg" alt="">
+        </div>-->
+        <div class="form-control">
+            <div class="form-group">
+                <label for=""><i class="fa fa-envelope"></i></label>
+                <input type="text" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for=""><i class="fa fa-lock"></i></label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <!--<p class="fpassword">forgot password?</p>-->
+            <div>
+                <button class="btn-login" id="btn_login">Login</button>
+            </div>
+            <p>Don't have an account? <a href="register.html">sigup here</a></p>
+        </div>
+    </div>
+    <div class="svg_down">
+        <img src="assets/img/images/svg_down.svg" alt="">
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+      $('#btn_login').click(function() {
+          var password = $("#password").val();
+          var email = $("#email").val();
+          const error = document.querySelector('.error')
+          if(password == "" || email == ""){
+                error.style.display = "block"
+                error.innerText = "Fill in all the inputs"
+                setTimeout(function(){
+                    error.style.display = "none"
+                }, 2000)
+          }
+          else{
+                $.post("include/validatelogin.php", {
+                    //The building_unique_id is the post array and then the second onces are the variables
+                    email: email,
+                    password: password,
+                }, function(data, status){
+                    //$("#notification").html(data);
+                    //alert(data);
+                    if(data == "done"){
+                        location.href = 'dashboard'
+                    }
+                    else{
+                        error.style.display = "block"
+                        error.innerText = data
+                        setTimeout(function(){
+                            error.style.display = "none"
+                        }, 3000)
+                    }
+                    });
+            }
+        });
+    });
+</script>
+</html>

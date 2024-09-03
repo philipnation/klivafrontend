@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/timer.js" defer></script>
+</head>
+<body id="body">
+    <div class="dashboard">
+        <div class="header">
+            <div class="picon">
+                <img src="assets/img/images/profile.png" alt="profile">
+                <!--<i class="fa fa-user"></i>-->
+            </div>
+            <div class="head-icons">
+                <!--<i class="fa fa-search"></i>-->
+                <a href="history"><i class="fa fa-bar-chart"></i></a>
+                <!--<i class="fa fa-bell"></i>-->
+            </div>
+        </div>
+        <div class="next-div">
+            <p>Hello <?php echo $user_row['username'] ?> 👋</p>
+            <p>What do you want to do today?</p>
+        </div>
+        <div class="baldiv">
+            <p>Exchange Rate</p>
+            <p>
+                <span class="balance">
+                    USDT 1.00 &nbsp; 
+                    <i class="fa fa-repeat"></i> &nbsp; 
+                    &#8358;<strong class="amount"></strong>
+                </span>
+            </p>
+            <a href="history">
+                <div class="fund_wallet">History  &nbsp;&nbsp;&nbsp; <i class="fa fa-bar-chart"></i></div>
+            </a>
+        </div>
+        <div class="qaction">
+            <p>Quick Action</p>
+        </div>
+
+        <div class="action">
+            <div>
+                <a href="buy">
+                    <div class="actions">
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                    <p>Buy USDT</p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div class="actions">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <p>Trade Gift Card</p>
+                </a>
+            </div>
+            <div>
+                <a href="profile">
+                    <div class="actions">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <p>Account</p>
+                </a>
+            </div>
+            <!--<div>
+                <div class="actions">
+                    <i class="fas fa-ellipsis-h more"></i>
+                </div>
+                <p>More</p>
+            </div>-->
+        </div>
+        <div class="svg_float">
+            <img src="assets/img/images/float.svg" alt="">
+        </div>
+        <div class="qaction">
+            <span>Recent Activity</span>
+            <!--<span><a href="history.html">see all</a></span>-->
+        </div>
+        <div class="activity">
+            
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-repeat'></i>
+                    </div>
+                    <div>
+                        <p>USDT</p>
+                    </div>
+                    <div>
+                        $2,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>2024-02-19</p>
+                    </div>
+                    <div class='pending'>
+                        pending
+                    </div>
+                </div>
+            </div>
+            <!--<hr>-->
+        </div>
+
+        <!--End of activities-->
+
+        <!--<footer>
+            <div><a href="#" title="home"><i class="fa fa-home"></i></a></div>
+            <div><a class="more" href="#" title="services"><i class="fas fa-store"></i></a></div>
+            <div><a class="fund_wallet" href="#" title="card"><i class="fab fa-cc-mastercard"></i></a></div>
+            <div><a href="#" title="settings"><i class="fa fa-user"></i></a></div>
+        </footer>-->
+
+    </div>
+</body>
+</html>

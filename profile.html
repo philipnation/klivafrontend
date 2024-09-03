@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/timer.js" defer></script>
+</head>
+<body id="body">
+    <div class="dashboard">
+        <div class="header">
+            <div class="picon">
+                <img src="assets/img/images/profile.png" alt="profile">
+                <!--<i class="fa fa-user"></i>-->
+            </div>
+            <div class="head-icons">
+                <a href="./"><i class="fa fa-home"></i></a>
+                <a href="history.html"><i class="fa fa-bar-chart"></i></a>
+                <!--<i class="fa fa-bell"></i>-->
+            </div>
+        </div>
+    </div>
+    <!--<div class="svg">
+        <img src="assets/img/images/svg.svg" alt="">
+    </div>-->
+    <div class="main-login">
+        <div class="next-div">
+            <p>User Profile</p>
+            <!--<p>Create an account to start using our services.</p>-->
+        </div>
+        <p class="error"></p>
+        <div class="form-control">
+            <div class="form-group">
+                <label for=""><i class="fa fa-user"></i></label>
+                <input type="text" id="username" value="Philip001" readonly>
+            </div>
+            <div class="svg_float">
+                <img src="assets/img/images/float.svg" alt="">
+            </div>
+            <div class="form-group">
+                <label for=""><i class="fa fa-envelope"></i></label>
+                <input type="text" id="email" value="philipdev@me.com" readonly>
+            </div>
+            <div class="form-group">
+                <label for=""><i class="fa fa-lock"></i></label>
+                <input type="password" id="password" value="*******" readonly>
+            </div>
+            <div class="form-group">
+                <label for=""><i class="fa fa-calendar"></i></label>
+                <input type="text" id="password_repeat" value="24th January, 2021" readonly>
+            </div>
+            <div>
+                <button class="btn-login" id="btn_login" style="color: white;">Update</button>
+            </div>
+        </div>
+    </div>
+    <!--<div class="svg_down">
+            <img src="assets/img/images/svg_down.svg" alt="">
+        </div>-->
+</body>
+<script>
+    $(document).ready(function() {
+      $('#btn_login').click(function() {
+          var username = $("#username").val();
+          var password = $("#password").val();
+          var email = $("#email").val();
+          var password_repeat = $("#password_repeat").val();
+          const error = document.querySelector('.error')
+          if(password == "" || username == "" || email == "" || password_repeat == ""){
+                error.style.display = "block"
+                error.innerText = "Fill in all the inputs"
+                setTimeout(function(){
+                    error.style.display = "none"
+                }, 2000)
+          }
+          else if(password != password_repeat){
+                error.style.display = "block"
+                error.innerText = "Password does not match"
+                setTimeout(function(){
+                    error.style.display = "none"
+                }, 2000)
+          }
+          else if(password.length < 5){
+                error.style.display = "block"
+                error.innerText = "Password must be up to six characters"
+                setTimeout(function(){
+                    error.style.display = "none"
+                }, 2000)
+          }
+          else{
+                $.post("include/register_user.php", {
+                    //The building_unique_id is the post array and then the second onces are the variables
+                    email: email,
+                    username : username,
+                    password: password,
+                    password_repeat: password_repeat,
+                }, function(data, status){
+                    //$("#notification").html(data);
+                    //alert(data);
+                    if(data == "done"){
+                        location.href = 'login.html'
+                    }
+                    else{
+                        error.style.display = "block"
+                        error.innerText = data
+                        setTimeout(function(){
+                            error.style.display = "none"
+                        }, 3000)
+                    }
+                    });
+            }
+        });
+    });
+</script>
+</html>

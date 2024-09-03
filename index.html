@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/images/logo.png">
+
+    <!--Font familiy-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+
+    <!--Local css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Ajax cnd-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Local js-->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/timer.js" defer></script>
+</head>
+<body id="body">
+    <div class="dashboard">
+        <div class="header">
+            <div class="picon">
+                <img src="assets/img/images/profile.png" alt="profile">
+                <!--<i class="fa fa-user"></i>-->
+            </div>
+            <div class="head-icons">
+                <!--<i class="fa fa-search"></i>-->
+                <a href="history.html"><i class="fa fa-bar-chart"></i></a>
+                <a href="#"></a><i class="fa fa-bell"></i></a>
+            </div>
+        </div>
+        <div class="next-div">
+            <p>Hello Philip 👋</p>
+            <p>What do you want to do today?</p>
+        </div>
+        <div class="baldiv">
+            <p>Balance</p>
+            <p>
+                <span class="balance"> 
+                    &#8358;12,346,789.00
+                </span>
+            </p>
+            <a href="history.html">
+                <div class="fund_wallet">Transactions  &nbsp;&nbsp;&nbsp; <i class="fa fa-bar-chart"></i></div>
+            </a>
+        </div>
+        <div class="qaction">
+            <p>Quick Action</p>
+        </div>
+
+        <div class="action">
+            <div>
+                <a href="withdraw.html">
+                    <div class="actions">
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                    <p>Withdrawal</p>
+                </a>
+            </div>
+            <div>
+                <a href="buy.html">
+                    <div class="actions">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <p>Deposit</p>
+                </a>
+            </div>
+            <div>
+                <a href="profile.html">
+                    <div class="actions">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <p>Profile</p>
+                </a>
+            </div>
+            <div>
+                <a href="investment.html">
+                    <div class="actions">
+                        <i class="fas fa-ellipsis-h more"></i>
+                    </div>
+                    <p>Invest</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="action" id="more2" style="margin-top: 30px;">
+            <div>
+                <a href="withdraw.html">
+                    <div class="actions">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <p>Deposit Hx</p>
+                </a>
+            </div>
+            <div>
+                <a href="buy.html">
+                    <div class="actions">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <p>Withdraw Hx</p>
+                </a>
+            </div>
+            <div>
+                <a href="profile">
+                    <div class="actions">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <p>Inv Hx</p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <div class="actions">
+                        <i class="fas fa-bar-chart"></i>
+                    </div>
+                    <p>Payout Hx</p>
+                </a>
+            </div>
+        </div>
+        <div class="svg_float">
+            <img src="assets/img/images/float.svg" alt="">
+        </div>
+        <div class="qaction">
+            <span>Payout History</span>
+            <!--<span><a href="history.html">see all</a></span>-->
+        </div>
+        <div class="activity">
+            
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Deposit</strong></p>
+                    </div>
+                    <div>
+                        &#8358;2,098,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>2024-02-19</p>
+                    </div>
+                    <div class='pending'>
+                        pending
+                    </div>
+                </div>
+            </div>
+            <!--<hr>-->
+        </div>
+
+        <!--End of activities-->
+
+        <!--<footer>
+            <div><a href="#" title="home"><i class="fa fa-home"></i></a></div>
+            <div><a class="more" href="#" title="services"><i class="fas fa-store"></i></a></div>
+            <div><a class="fund_wallet" href="#" title="card"><i class="fab fa-cc-mastercard"></i></a></div>
+            <div><a href="#" title="settings"><i class="fa fa-user"></i></a></div>
+        </footer>-->
+
+    </div>
+</body>
+</html>
