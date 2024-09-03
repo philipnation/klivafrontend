@@ -1,13 +1,22 @@
-const openPopupButton = document.getElementById('proceed');
+//const openPopupButton = document.getElementById('proceed');
+const openPopupButtons = document.querySelectorAll('#proceed');
 const timerDisplay = document.getElementById('timer');
 
 let countdown;
 endtime = 30;
 
-openPopupButton.addEventListener('click', () => {
+/*openPopupButton.addEventListener('click', () => {
     startTimer(endtime * 60);
     document.getElementById("time_div").style.display = "block"
     document.getElementById("inv").style.display = "none"
+});*/
+
+openPopupButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        startTimer(endtime * 60);
+        document.getElementById("time_div").style.display = "block";
+        document.getElementById("inv").style.display = "none";
+    });
 });
 
 function startTimer(duration) {
