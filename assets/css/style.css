@@ -1,6 +1,6 @@
 :root{
     --color: #006756;
-    --secondary-color: #000;
+    --secondary-color: #fff;
     --black: #000;
 }
 html{
@@ -71,6 +71,14 @@ a{
 .bg-black{
     background-color: black;
 }
+.strong{
+    font-weight: bolder;
+    border: 1px dashed var(--color);
+    padding: 3px;
+}
+.rounded{
+    border-radius: 5px;
+}
 .error{
     display: none;
     background-color: #fff;
@@ -91,10 +99,10 @@ a{
     width: 100%;
     font-size: 9pt;
     padding: 15px;
-    padding-right: 0px;
-    padding-left: 0px;
-    text-align: center;
-    animation: 0.5s shake linear;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: left;
+    /* animation: 0.5s shake linear; */
     font-family: 'Montserrat',serif;
     z-index: 1;
 }
@@ -102,6 +110,15 @@ a{
     position: absolute;
     right: 5%;
     font-size: 14px;
+    font-weight: bolder;
+}
+.notice{
+    background-color: var(--color);
+    color: var(--secondary-color);
+    padding: 10px;
+    width: auto;
+    font-size: 13px;
+    line-height: 1.5;
 }
 .preloader{
     position: fixed;
@@ -303,7 +320,8 @@ a{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(204, 198, 198);
+    /* background-color: rgb(204, 198, 198); */
+    background-color: transparent;
     padding: 5px;
 }
 .dashboard .header .head-icons i{

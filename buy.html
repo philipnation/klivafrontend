@@ -35,7 +35,7 @@
     <div class="dashboard">
         <div class="header">
             <div class="picon">
-                <img src="assets/img/images/profile.png" alt="profile">
+                <img src="assets/img/images/kliva.png" alt="profile">
                 <!--<i class="fa fa-user"></i>-->
             </div>
             <div class="head-icons">
@@ -43,101 +43,228 @@
                 <a href="#"><i class="fa fa-bell"></i></a>
             </div>
         </div>
-        <p class="error"></p>
+        <p class="notification" id="notification">
+            <span id="notification-text"></span>
+            <span class="cancel" onclick="document.querySelector('.notification').style.display = 'none'">X</span>
+        </p>
+        <form action="">
+            <div class="buy" id="buy">
+                <div class="updiv">BUY</div>
+                <div>
+                    <label for="">Amount</label>
+                    <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
+                    <span for="" class="side-span">&#8358;</span>
 
-        <div class="buy" id="buy">
-            <div class="updiv">BUY</div>
-            <div>
-                <label for="">Amount</label>
-                <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
-                <span for="" class="side-span">&#8358;</span>
+                </div>
 
+                <div>
+                    <label for="">Select Investment Plan</label>
+                    <!--<input type="text" class="wallet-address" id="wallet_address" placeholder="Enter wallet address">-->
+                    <select name="wallet_address" id="wallet_address" class="wallet-address" style="width: 100%; border: 1px solid grey;">
+                        <option value="none">Select Plan</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <!--<div>
+                    <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
+                </div>-->
             </div>
-            <!--<div>
-                <label for="">you pay</label>
-                <input type="number" id="nairaamount" onkeyup="changeusdt()" placeholder="0">
-                <span for="" class="side-span">&#8358;</span>
-            </div>-->
-            <div>
-                <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
+
+            <div class="buy" id="time_div" style="display: block;">
+                <div>
+                    <!--<label for="">Timer to Account details closure</label>-->
+                    <nav>
+                        <div>
+                            Account Number:
+                        </div>
+                        <div>
+                            2223947322
+                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('2223947322')"></i></span>
+                        </div>
+                    </nav>
+                    <nav>
+                        <div>
+                            Bank:
+                        </div>
+                        <div>
+                            Indigo Bank
+                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('uba')"></i></span>
+                        </div>
+                    </nav>
+                    <nav>
+                        <div>
+                            Name:
+                        </div>
+                        <div>
+                            Johs Iscoio
+                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('philip ike')"></i></span>
+                        </div>
+                    </nav>
+                    <p id="timer"></p>
+                    <div class="buy" id="buy">
+                        <!-- <div class="updiv">BUY</div> -->
+                        <div>
+                            <label for="">Payment Receipt</label>
+                            <input type="file" placeholder="Payment Receipt" style="font-size: 14px;">
+                            <!-- <span for="" class="side-span">&#8358;</span> -->
+            
+                        </div>
+                        <!--<div>
+                            <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
+                        </div>-->
+                    </div>
+                </div>
+                <div>
+                    <a href="#"><button class="text-white">Cancel Anyways</button></a>
+                    <a href="./"><button class="text-white">Payment Done</button></a>
+                </div>
             </div>
+        </form>
+
+
+
+        <div class="qaction">
+            <span>All Deposit History</span>
+            <!--<span>see all</span>-->
+        </div>
+        <div class="svg_float">
+            <img src="assets/img/images/float.svg" alt="">
         </div>
 
-        <div class="buy" id="wallet_div">
-            <div>
-                <label for="">Select Investment Plan</label>
-                <!--<input type="text" class="wallet-address" id="wallet_address" placeholder="Enter wallet address">-->
-                <select name="wallet_address" id="wallet_address" class="wallet-address" style="width: 100%; border: 1px solid grey;">
-                    <option value="none">Select Plan</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+        <div class="activity">
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Deposit</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
             </div>
-            <div>
-                <button id="proceed" class="text-white">Proceed</button>
-            </div>
-        </div>
 
-        <div class="buy" id="time_div">
-            <div>
-                <label for="">Timer to Account details closure</label>
-                <nav>
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
                     <div>
-                        Account Number:
+                        <i class='fa fa-credit-card'></i>
                     </div>
                     <div>
-                        2223947322
-                        <span><i class="fa fa-copy"></i></span>
-                    </div>
-                </nav>
-                <nav>
-                    <div>
-                        Bank:
+                        <p><strong>Deposit</strong></p>
                     </div>
                     <div>
-                        Indigo Bank
-                        <span><i class="fa fa-copy"></i></span>
+                        139,000
                     </div>
-                </nav>
-                <nav>
+                </div>
+                <div class='activitydate'>
                     <div>
-                        Name:
+                        <p>24-01-02</p>
                     </div>
-                    <div>
-                        Johs Iscoio
-                        <span><i class="fa fa-copy"></i></span>
+                    <div class='completed'>
+                        completed
                     </div>
-                </nav>
-                <p id="timer"></p>
+                </div>
             </div>
-            <div>
-                <a href="#"><button class="text-white">Cancel Anyways</button></a>
-                <a href="./"><button class="text-white">Payment Done</button></a>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Deposit</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
+            </div>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Deposit</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='pending'>
+                        Pending
+                    </div>
+                </div>
+            </div>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Deposit</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 </body>
 <script>
-    $(document).ready(function() {
-      $('#proceed').click(function() {
-          var usdtamount = $("#usdtamount").val();
-          var nairaamount = $("#nairaamount").val();
-          var email = $("#email").val();
-          var userid = $("#userid").val();
-          var wallet_address = $("#wallet_address").val();
-          $.post("include/addbuy.php", {
-              //The building_unique_id is the post array and then the second onces are the variables
-              email: email,
-              nairaamount : nairaamount ,
-              usdtamount: usdtamount,
-              wallet_address: wallet_address,
-          }, function(data, status){
-              $("#notification").html(data);
-              alert(data);
-          });
-      });
-    });
+    function copyTextToClipboard(text) {
+      var copyText = document.createElement("textarea");
+      var notification = document.getElementById('notification')
+      var notification_text = document.getElementById('notification-text')
+      copyText.value = text;
+      document.body.appendChild(copyText);
+      copyText.select();
+      document.execCommand("copy");
+      document.body.removeChild(copyText);
+      notification.style.display = 'block'
+      notification_text.innerHTML = text+" Copied"
+      //alert("Copied: " + text);
+    }
 </script>
 </html>

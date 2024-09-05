@@ -35,67 +35,195 @@
     <div class="dashboard">
         <div class="header">
             <div class="picon">
-                <img src="assets/img/images/profile.png" alt="profile">
+                <img src="assets/img/images/kliva.png" alt="profile">
                 <!--<i class="fa fa-user"></i>-->
             </div>
             <div class="head-icons">
                 <a href="./"><i class="fa fa-home"></i></a>
-                <!--<i class="fa fa-bell"></i>-->
+                <i class="fa fa-bell"></i>
             </div>
         </div>
         
         <p class="error"></p>
+        <form action="">
+            <div class="buy" id="buy">
+                <div class="updiv" style="width: auto;">WITHDRAWAL</div>
+                <br>
+                <div>
+                    <label for="">Amount</label>
+                    <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
+                    <span for="" class="side-span">&#8358;</span>
 
-        <div class="buy" id="buy">
-            <div class="updiv" style="width: auto;">WITHDRAWAL</div>
-            <div>
-                <label for="">Amount</label>
-                <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
-                <span for="" class="side-span">&#8358;</span>
+                </div>
+                <!--<div>
+                    <label for="">you pay</label>
+                    <input type="number" id="nairaamount" onkeyup="changeusdt()" placeholder="0">
+                    <span for="" class="side-span">&#8358;</span>
+                </div>
+                <div>
+                    <button id="btn_pay" style="color: white;">WITHDRAW &#8358; <span id="nairaamount2">0</span></button>
+                </div>-->
+            </div>
 
+            <div class="buy" id="wallet_div" style="display: block;">
+                <div>
+                    <label for="" style="text-align: center;">Receiving Bank Details</label>
+                    <nav>
+                        <div>
+                            Account Number:
+                        </div>
+                        <div>
+                            2223947322
+                        </div>
+                    </nav>
+                    <nav>
+                        <div>
+                            Bank:
+                        </div>
+                        <div>
+                            Indigo Bank
+                        </div>
+                    </nav>
+                    <nav>
+                        <div>
+                            Name:
+                        </div>
+                        <div>
+                            Johs Iscoio
+                        </div>
+                    </nav>
+                    <p id="timer"></p>
+                </div>
+                <div>
+                    <!-- <button><a href="#" style="color: white;">Cancel</a></button> -->
+                    <button style="color: white;">Proceed</button>
+                </div>
             </div>
-            <!--<div>
-                <label for="">you pay</label>
-                <input type="number" id="nairaamount" onkeyup="changeusdt()" placeholder="0">
-                <span for="" class="side-span">&#8358;</span>
-            </div>-->
-            <div>
-                <button id="btn_pay" style="color: white;">WITHDRAW &#8358; <span id="nairaamount2">0</span></button>
-            </div>
+        </form>
+
+
+        <div class="qaction">
+            <span>Withdrawal History</span>
+            <!--<span>see all</span>-->
+        </div>
+        <div class="svg_float">
+            <img src="assets/img/images/float.svg" alt="">
         </div>
 
-        <div class="buy" id="wallet_div">
-            <div>
-                <label for="" style="text-align: center;">Receiving Bank</label>
-                <nav>
+        <div class="activity">
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
                     <div>
-                        Account Number:
+                        <i class='fa fa-credit-card'></i>
                     </div>
                     <div>
-                        2223947322
-                    </div>
-                </nav>
-                <nav>
-                    <div>
-                        Bank:
+                        <p><strong>Withdrawal</strong></p>
                     </div>
                     <div>
-                        Indigo Bank
+                        139,000
                     </div>
-                </nav>
-                <nav>
+                </div>
+                <div class='activitydate'>
                     <div>
-                        Name:
+                        <p>24-01-02</p>
                     </div>
-                    <div>
-                        Johs Iscoio
+                    <div class='completed'>
+                        completed
                     </div>
-                </nav>
-                <p id="timer"></p>
+                </div>
             </div>
-            <div>
-                <button><a href="#" style="color: white;">Cancel</a></button>
-                <a href="./"><button style="color: white;">Proceed</button></a>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Withdrawal</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
+            </div>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Withdrawal</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
+            </div>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Withdrawal</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='pending'>
+                        Pending
+                    </div>
+                </div>
+            </div>
+
+            <!--each activity-->
+            <div class='activities'>
+                <div class='activitydes'>
+                    <div>
+                        <i class='fa fa-credit-card'></i>
+                    </div>
+                    <div>
+                        <p><strong>Withdrawal</strong></p>
+                    </div>
+                    <div>
+                        139,000
+                    </div>
+                </div>
+                <div class='activitydate'>
+                    <div>
+                        <p>24-01-02</p>
+                    </div>
+                    <div class='completed'>
+                        completed
+                    </div>
+                </div>
             </div>
         </div>
 
