@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
-
+    <title>Profile Page</title>
     <!--Favicon-->
     <link rel="icon" href="assets/img/images/logo.png">
 
@@ -30,111 +29,190 @@
     <!--Local js-->
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/timer.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #006756;
+        }
+        .verified-badge {
+            color: #28a745;
+        }
+        .nav-tabs .nav-link{
+            color: #006756;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #006756;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .account-details .form-control, .account-details .form-label{
+            font-family: 'Montserrat', sans-serif !important;
+        }
+        .account-details, .refer-earn {
+            border: 1px solid #006756;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .copy-btn {
+            background-color: #006756;
+            border: none;
+            color: #fff;
+        }
+    </style>
 </head>
-<body id="body">
+<body>
     <div class="dashboard">
-        <div class="header">
-            <div class="picon">
-                <img src="assets/img/images/profile.png" alt="profile">
-                <!--<i class="fa fa-user"></i>-->
+    <div class="header">
+        <div class="picon">
+            <img src="assets/img/images/kliva.png" alt="profile">
+            <!--<i class="fa fa-user"></i>-->
+        </div>
+        <div class="head-icons">
+            <!--<i class="fa fa-search"></i>-->
+            <a href="#"><i class="fa fa-home"></i></a>
+            <a href="#"></a><i class="fa fa-bell"></i></a>
+        </div>
+    </div>
+    </div>
+<div class="container mt-5">
+    <div class="profile-card text-center">
+        <img src="assets/img/images/kliva.png" alt="Profile Image" class="profile-image mb-3">
+        <h4>Alex Foster</h4>
+        <p>alexfoster111900@gmail.com <span class="verified-badge">✔ Verified</span></p>
+    </div>
+
+    <ul class="nav nav-tabs justify-content-center mb-4">
+        <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="changeform('profile')">MY PROFILE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="changeform('payment')">PAYMENT ACCOUNT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="changeform('security')">SECURITY</a>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="account-details" id="profile">
+                <h5>Account Details</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" value="alexfoster" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Fullname</label>
+                        <input type="text" class="form-control" id="fullname" value="Alex Foster" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" value="alexfoster111900@gmail.com" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" value="08645079659" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Profile Photo</label>
+                        <input type="file" class="form-control" id="photo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Short Biography <small>(Optional)</small></label>
+                        <textarea type="text" class="form-control" id="bio"></textarea>
+                    </div>
+                </form>
             </div>
-            <div class="head-icons">
-                <a href="./"><i class="fa fa-home"></i></a>
-                <a href="history.html"><i class="fa fa-bar-chart"></i></a>
-                <!--<i class="fa fa-bell"></i>-->
+
+            <div class="account-details" id="payment" style="display: none;">
+                <h5>Account Details</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Account Name</label>
+                        <input type="text" class="form-control" id="username" value="alexfoster" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Account Number</label>
+                        <input type="text" class="form-control" id="fullname" value="Alex Foster" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Bank Name</label>
+                        <input type="email" class="form-control" id="email" value="alexfoster111900@gmail.com" readonly>
+                    </div>
+                </form>
+            </div>
+
+            <div class="account-details" id="security" style="display: none;">
+                <h5>Change Password</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Old Password</label>
+                        <input type="password" class="form-control" id="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="fullname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="refer-earn">
+                <h5>REFER & EARN</h5>
+                <p>Referral Link:</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" value="https://klivafarm.com/account/register/7b399f1d74" readonly>
+                    <button class="btn copy-btn" type="button">Copy Link</button>
+                </div>
             </div>
         </div>
     </div>
-    <!--<div class="svg">
-        <img src="assets/img/images/svg.svg" alt="">
-    </div>-->
-    <div class="main-login">
-        <div class="next-div">
-            <p>User Profile</p>
-            <!--<p>Create an account to start using our services.</p>-->
-        </div>
-        <p class="error"></p>
-        <div class="form-control">
-            <div class="form-group">
-                <label for=""><i class="fa fa-user"></i></label>
-                <input type="text" id="username" value="Philip001" readonly>
-            </div>
-            <div class="svg_float">
-                <img src="assets/img/images/float.svg" alt="">
-            </div>
-            <div class="form-group">
-                <label for=""><i class="fa fa-envelope"></i></label>
-                <input type="text" id="email" value="philipdev@me.com" readonly>
-            </div>
-            <div class="form-group">
-                <label for=""><i class="fa fa-lock"></i></label>
-                <input type="password" id="password" value="*******" readonly>
-            </div>
-            <div class="form-group">
-                <label for=""><i class="fa fa-calendar"></i></label>
-                <input type="text" id="password_repeat" value="24th January, 2021" readonly>
-            </div>
-            <div>
-                <button class="btn-login" id="btn_login" style="color: white;">Update</button>
-            </div>
-        </div>
-    </div>
-    <!--<div class="svg_down">
-            <img src="assets/img/images/svg_down.svg" alt="">
-        </div>-->
-</body>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    $(document).ready(function() {
-      $('#btn_login').click(function() {
-          var username = $("#username").val();
-          var password = $("#password").val();
-          var email = $("#email").val();
-          var password_repeat = $("#password_repeat").val();
-          const error = document.querySelector('.error')
-          if(password == "" || username == "" || email == "" || password_repeat == ""){
-                error.style.display = "block"
-                error.innerText = "Fill in all the inputs"
-                setTimeout(function(){
-                    error.style.display = "none"
-                }, 2000)
-          }
-          else if(password != password_repeat){
-                error.style.display = "block"
-                error.innerText = "Password does not match"
-                setTimeout(function(){
-                    error.style.display = "none"
-                }, 2000)
-          }
-          else if(password.length < 5){
-                error.style.display = "block"
-                error.innerText = "Password must be up to six characters"
-                setTimeout(function(){
-                    error.style.display = "none"
-                }, 2000)
-          }
-          else{
-                $.post("include/register_user.php", {
-                    //The building_unique_id is the post array and then the second onces are the variables
-                    email: email,
-                    username : username,
-                    password: password,
-                    password_repeat: password_repeat,
-                }, function(data, status){
-                    //$("#notification").html(data);
-                    //alert(data);
-                    if(data == "done"){
-                        location.href = 'login.html'
-                    }
-                    else{
-                        error.style.display = "block"
-                        error.innerText = data
-                        setTimeout(function(){
-                            error.style.display = "none"
-                        }, 3000)
-                    }
-                    });
-            }
-        });
-    });
+    function changeform(text){
+        //alert(text)
+        var form = document.getElementById(text)
+        var profile = document.getElementById('profile')
+        var payment = document.getElementById('payment')
+        var security = document.getElementById('security')
+
+        if(text == 'profile'){
+            form.style.display = 'block'
+            payment.style.display = 'none'
+            security.style.display = 'none'
+        }else if(text == 'payment'){
+            form.style.display = 'block'
+            profile.style.display = 'none'
+            security.style.display = 'none'
+        }else if(text == 'security'){
+            form.style.display = 'block'
+            payment.style.display = 'none'
+            profile.style.display = 'none'
+        }
+    }
 </script>
+</body>
 </html>
