@@ -308,16 +308,16 @@ a{
 .dashboard, .funding{
     margin: 10px;
 }
-.dashboard .header, .funding .header{
+.header, .funding .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 15pt;
 }
-.dashboard .header .picon{
+.header .picon{
     clip-path: circle();
 }
-.dashboard .header img{
+.header img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -325,7 +325,7 @@ a{
     background-color: transparent;
     padding: 5px;
 }
-.dashboard .header .head-icons i{
+.header .head-icons i{
     /*box-shadow: 1px 1px 10px rgb(223, 217, 217);*/
     border-radius: 10px;
     padding: 15px;
@@ -333,6 +333,8 @@ a{
     color: var(--color);
     background-color: #fff;
 }
+
+
 .dashboard .next-div{
     font-family: 'Montserrat';
     line-height: 1.5;
@@ -573,3 +575,10 @@ a{
     color: var(--color);
     margin-left: 10px;
 }
+
+@media only screen and (min-width: 800px) {
+    .dashboard {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+  }
