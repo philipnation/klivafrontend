@@ -111,6 +111,7 @@ a{
     right: 5%;
     font-size: 14px;
     font-weight: bolder;
+    cursor: pointer;
 }
 .notice{
     background-color: var(--color);

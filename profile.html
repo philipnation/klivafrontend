@@ -88,6 +88,10 @@
             <a href="#"></a><i class="fa fa-bell"></i></a>
         </div>
     </div>
+    <p class="notification" id="notification">
+        <span id="notification-text"></span>
+        <span class="cancel" onclick="document.querySelector('.notification').style.display = 'none'">X</span>
+    </p>
     </div>
 <div class="container mt-5">
     <div class="profile-card text-center">
@@ -191,7 +195,7 @@
                 <p>Referral Link:</p>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" value="https://klivafarm.com/account/register/7b399f1d74" readonly>
-                    <button class="btn copy-btn" type="button">Copy Link</button>
+                    <button class="btn copy-btn" type="button" onclick="copyTextToClipboard('klivafarm.com/account/register/7b399f1d74')">Copy Link</button>
                 </div>
             </div>
         </div>
@@ -221,6 +225,21 @@
             payment.style.display = 'none'
             profile.style.display = 'none'
         }
+    }
+</script>
+<script>
+    function copyTextToClipboard(text) {
+      var copyText = document.createElement("textarea");
+      var notification = document.getElementById('notification')
+      var notification_text = document.getElementById('notification-text')
+      copyText.value = text;
+      document.body.appendChild(copyText);
+      copyText.select();
+      document.execCommand("copy");
+      document.body.removeChild(copyText);
+      notification.style.display = 'block'
+      notification_text.innerHTML = "Referral Link Copied"
+      //alert("Copied: " + text);
     }
 </script>
 </body>
