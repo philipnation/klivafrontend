@@ -315,12 +315,12 @@ a{
     font-size: 15pt;
 }
 .header .picon{
-    clip-path: circle();
+    /* clip-path: circle(); */
 }
 .header img{
-    width: 30px;
+    width: 100px;
     height: 30px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* background-color: rgb(204, 198, 198); */
     background-color: transparent;
     padding: 5px;
