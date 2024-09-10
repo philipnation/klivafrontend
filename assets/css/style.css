@@ -578,7 +578,7 @@ a{
 
 @media only screen and (min-width: 800px) {
     .dashboard {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 250px;
+        margin-right: 250px;
     }
   }
