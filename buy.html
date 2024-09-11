@@ -52,7 +52,7 @@
                 <div class="updiv">BUY</div>
                 <div>
                     <label for="">Amount</label>
-                    <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" max="5000">
+                    <input type="number" id="usdtamount" onkeyup="changenaira()" placeholder="0" min="0" style="width: 80%;">
                     <span for="" class="side-span">&#8358;</span>
 
                 </div>
@@ -60,67 +60,69 @@
                 <div>
                     <label for="">Select Investment Plan</label>
                     <!--<input type="text" class="wallet-address" id="wallet_address" placeholder="Enter wallet address">-->
-                    <select name="wallet_address" id="wallet_address" class="wallet-address" style="width: 100%; border: 1px solid grey;">
+                    <select name="wallet_address" id="wallet_address" class="plan-select">
                         <option value="none">Select Plan</option>
                         <option value=""></option>
                         <option value=""></option>
                         <option value=""></option>
                     </select>
                 </div>
+
+                <div class="buy" id="time_div" style="display: block;">
+                    <div>
+                        <!--<label for="">Timer to Account details closure</label>-->
+                        <nav>
+                            <div>
+                                Account Number:
+                            </div>
+                            <div>
+                                2223947322
+                                <span><i class="fa fa-copy" onclick="copyTextToClipboard('2223947322')"></i></span>
+                            </div>
+                        </nav>
+                        <nav>
+                            <div>
+                                Bank:
+                            </div>
+                            <div>
+                                Indigo Bank
+                                <span><i class="fa fa-copy" onclick="copyTextToClipboard('uba')"></i></span>
+                            </div>
+                        </nav>
+                        <nav>
+                            <div>
+                                Name:
+                            </div>
+                            <div>
+                                Johs Iscoio
+                                <span><i class="fa fa-copy" onclick="copyTextToClipboard('philip ike')"></i></span>
+                            </div>
+                        </nav>
+                        <p id="timer"></p>
+                        <div class="buy" id="buy">
+                            <!-- <div class="updiv">BUY</div> -->
+                            <div>
+                                <label for="">Payment Receipt</label>
+                                <input type="file" placeholder="Payment Receipt" style="font-size: 14px;">
+                                <!-- <span for="" class="side-span">&#8358;</span> -->
+                
+                            </div>
+                            <!--<div>
+                                <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div>
+                        <!--<a href="#"><button class="text-white">Cancel Anyways</button></a>-->
+                        <button class="text-white">Payment Done</button>
+                    </div>
+                </div>
                 <!--<div>
                     <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
                 </div>-->
             </div>
 
-            <div class="buy" id="time_div" style="display: block;">
-                <div>
-                    <!--<label for="">Timer to Account details closure</label>-->
-                    <nav>
-                        <div>
-                            Account Number:
-                        </div>
-                        <div>
-                            2223947322
-                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('2223947322')"></i></span>
-                        </div>
-                    </nav>
-                    <nav>
-                        <div>
-                            Bank:
-                        </div>
-                        <div>
-                            Indigo Bank
-                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('uba')"></i></span>
-                        </div>
-                    </nav>
-                    <nav>
-                        <div>
-                            Name:
-                        </div>
-                        <div>
-                            Johs Iscoio
-                            <span><i class="fa fa-copy" onclick="copyTextToClipboard('philip ike')"></i></span>
-                        </div>
-                    </nav>
-                    <p id="timer"></p>
-                    <div class="buy" id="buy">
-                        <!-- <div class="updiv">BUY</div> -->
-                        <div>
-                            <label for="">Payment Receipt</label>
-                            <input type="file" placeholder="Payment Receipt" style="font-size: 14px;">
-                            <!-- <span for="" class="side-span">&#8358;</span> -->
             
-                        </div>
-                        <!--<div>
-                            <button id="btn_pay" style="color: white;">PAY &#8358; <span id="nairaamount2">0</span></button>
-                        </div>-->
-                    </div>
-                </div>
-                <div>
-                    <!--<a href="#"><button class="text-white">Cancel Anyways</button></a>-->
-                    <button class="text-white">Payment Done</button>
-                </div>
-            </div>
         </form>
 
 
@@ -129,9 +131,9 @@
             <span>All Deposit History</span>
             <!--<span>see all</span>-->
         </div>
-        <div class="svg_float">
+        <!--<div class="svg_float">
             <img src="assets/img/images/float.svg" alt="">
-        </div>
+        </div>-->
 
         <div class="activity">
             <!--each activity-->
