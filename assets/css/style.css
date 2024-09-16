@@ -616,6 +616,11 @@ a{
     font-size: 14px;
     color: #FFF;
     padding: 18px;
+    text-align: center;
+}
+.ad-container .ad-button{
+    margin: auto;
+    text-align: center;
 }
 .ad-container .ad-button button{
     padding: 10px;
