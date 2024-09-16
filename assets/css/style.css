@@ -580,10 +580,47 @@ a{
     height: 32px;
     border: 1px solid rgb(168, 166, 166);
 }
-
+.ad-container{
+    background-color: var(--color);
+    width: 80%;
+    /* aspect-ratio: 1/1; */
+    height: auto;
+    position: fixed;
+    top: 30%;
+    right: 50%;
+    translate: 50%;
+    border-radius: 20px;
+    /* border: 2px solid #FFF; */
+    padding: 10px;
+    box-shadow: 1px 1px 40px #FFF;
+}
+.ad-container .ad-header{
+    text-align: center;
+    padding: 10px;
+    color: #FFF;
+    width: 50%;
+    margin: auto;
+    font-size: 19px;
+}
+.ad-container .ad-message{
+    font-size: 14px;
+    color: #FFF;
+    padding: 18px;
+}
+.ad-container .ad-button button{
+    padding: 10px;
+    width: 100px;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    margin-top: 20px;
+}
 @media only screen and (min-width: 800px) {
     .dashboard {
         margin-left: 250px;
         margin-right: 250px;
+    }
+    .ad-container{
+        width: 30%;
     }
   }
