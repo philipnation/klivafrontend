@@ -594,6 +594,16 @@ a{
     padding: 10px;
     box-shadow: 1px 1px 40px #FFF;
 }
+.ad-container .ad-x{
+    color: #FFF;
+    text-align: right;
+    padding: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.ad-container .ad-x a{
+    color: #FFF;
+}
 .ad-container .ad-header{
     text-align: center;
     padding: 10px;
